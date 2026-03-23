@@ -10,11 +10,11 @@ function App() {
     // This function reaches out to your Express server
     const fetchMarketData = async () => {
       try {
-        const bookRes = await fetch('http://localhost:3000/api/book');
+        const bookRes = await fetch('https://quantumx-trading-engine.onrender.com/api/book');
         const bookData = await bookRes.json();
         setBook(bookData);
 
-        const tradesRes = await fetch('http://localhost:3000/api/trades');
+        const tradesRes = await fetch('https://quantumx-trading-engine.onrender.com/api/trades');
         const tradesData = await tradesRes.json();
         
         // We only want to show the 10 most recent trades so the screen doesn't overflow
